@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --gray-text: hsl(228, 12%, 48%);
+}
+
+@font-face {
+    font-family:'Figtree Italic';
+    src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Figtree Regular';
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+}
+
+body {
+    font-family: 'Figtree Regular' ,sans-serif;
+    background-color: var(--yellow);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text:not(h1) {
+    font-size: 0.9rem;
+}
+
+p {
+    color: var(--gray-text);
+}
+
+figcaption {
+    color: black;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 6px 6px 0 black;
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.card > .text {
+    align-self: flex-start;
+}
+
+.learning {
+    font-weight: 700;
+    background-color: var(--yellow);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.5rem;
+}
+
+.attribution {
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 425px;
+    }
+
+    .text:not(h1) {
+    font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .text:not(h1) {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
